@@ -1,0 +1,15 @@
+<div class="m-aside">
+    <div class="main">
+        <div class="username"><%= theme.username %></div>
+        <div class="motto"><%= theme.motto %></div>
+        <div class="social-links">
+            <% for (var i in theme.social_links){ %>
+                <a class="iconfont icon-<%= i %>" href="<%- url_for(theme.social_links[i]) %>" target="_blank"></a>
+            <% } %>
+        </div>
+    </div>
+    <div class="footer">
+        &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br>
+        <%= __('powered_by') %> <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+</div>

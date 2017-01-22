@@ -1,0 +1,7 @@
+<div class="m-menu">
+    <ul>
+        <% theme.menu.forEach(function(item) { %>
+            <li><a href="<%- url_for(item.url) %>"><%= __(item.title.toLowerCase()) %></a></li>
+        <% }) %>
+    </ul>
+</div>

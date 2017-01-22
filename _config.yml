@@ -1,0 +1,21 @@
+# Aside
+username: 破秋风
+motto: 赞美太阳
+social_links:
+    github: https://github.com/akizmh
+    weibo: http://weibo.com/1669914685/profile?rightmod=1&wvr=6&mod=personinfo
+
+# Content
+excerpt_link: Read More
+menu:
+    - title: Home
+      url: /
+    - title: Archives
+      url: /archives
+    - title: Tags
+      url: /tags
+    - title: Categories
+      url: /categories
+    - title: About
+      url: /about
+

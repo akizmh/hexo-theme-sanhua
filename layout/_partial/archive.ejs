@@ -1,0 +1,22 @@
+<div class="g-content m-article">
+  <% if (index){ %>
+    <% page.posts.each(function(post){ %>
+      <%- partial('article', {post: post, index: true}) %>
+    <% }) %>
+  <% } else { %>
+      <% var currentYear; %>
+      <% page.posts.each(function(post){ %>
+        <% if(currentYear != post.date.year()) { %>
+          <% currentYear = post.date.year() %>
+          <h3 class="archive-year"><%= currentYear  %></h3>
+        <% } %>
+        <div class="archive-article">
+            <p class="title"><a href="<%= url_for(post.path) %>"><%= post.title %></a></p>
+            <p class="date"><%= date(post.date,'MM-DD') %></p>
+        </div>
+      <% }) %>
+  <% } %>
+  <% if (page.total > 1){ %>
+    <%- partial('paginator') %>
+  <% } %>
+</div>

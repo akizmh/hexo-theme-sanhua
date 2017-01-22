@@ -1,0 +1,17 @@
+<nav class="m-pager">
+    <% if (page.prev || page.next) { %>
+        <% if (page.prev){ %>
+            <a href="<%- config.root %><%- page.prev_link %>" class="prev"><i class="iconfont icon-caret-left"></i> <%= __('prev') %></a>
+        <% } else { %>
+            <a class="prev disabled"><i class="iconfont icon-caret-left"></i><%= __('prev') %></a>
+        <% } %>
+
+        <a href="<%- config.root %>" class="home"><i class="iconfont icon-home"></i>Home</a>
+        <% if (page.next){ %>
+            <a href="<%- config.root %><%- page.next_link %>" class="next"><%= __('next') %><i class="iconfont icon-caret-right"></i></a>     
+        <% } else { %>
+            <a class="next disabled"><%= __('next') %><i class="iconfont icon-caret-right"></i></a>
+        <% } %>
+
+    <% }  %>
+</nav>

@@ -1,0 +1,12 @@
+<div class="g-content m-sort">
+    <% site.categories.sort('name').forEach(function(item){ %>
+        <div class="sort-item">
+            <h3><%= item.name %></h3>
+            <% site.posts.forEach(function(it){ %>
+                <% if (it.categories.length == 1 && it.categories.data[0]._id == item._id){ %>
+                    <p class="title"><a href="<%= url_for(it.path) %>"><%= it.title %></a></p>
+                <% } %>
+            <% }) %>
+        </div>
+    <% }) %>
+</div>

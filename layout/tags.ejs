@@ -1,0 +1,24 @@
+ <% 
+    var checkTags = function(tags, id) {
+        var flag = false;
+        for (var i = 0, len = tags.length; i < len; i++) {
+            if (tags[i]._id === id) {
+                flag = true;
+                break;
+            }
+        };
+        return flag;
+    };
+%>
+<div class="g-content m-sort">
+    <% site.tags.sort('name').forEach(function(item){ %>
+        <div class="sort-item">
+            <h3><%= item.name %></h3>
+            <% site.posts.forEach(function(it){ %>
+                <% if (it.tags.length && checkTags(it.tags.data,item._id)){ %>
+                    <p class="title"><a href="<%= url_for(it.path) %>"><%= it.title %></a></p>
+                <% } %>
+            <% }) %>
+        </div>
+    <% }) %>
+</div>
