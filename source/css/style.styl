@@ -2,7 +2,6 @@
 @import "_variables"
 @import "_extend"
 @import "fontAwesome.css"
-@import "highlight.css"
 
 @font-face
   font-family: FontAwesome
@@ -64,7 +63,7 @@ a
                 text-decoration: underline
     @media screen and (min-width: media-min-width) and (max-width: media-max-width)
         width: aside-percentage
-    @media screen and (max-width: media-max-width)
+    @media screen and (max-width: media-min-width)
         position: static
         margin-top: menu-height
         width: 100%
@@ -83,7 +82,7 @@ a
     bottom: 0
     @media screen and (min-width: media-min-width) and (max-width: media-max-width)
         left: aside-percentage
-    @media screen and (max-width: media-max-width)
+    @media screen and (max-width: media-min-width)
         position: static
         .g-content
             padding: 20px
@@ -157,7 +156,7 @@ a
                 text-shadow: 1px 1px 2px #c9171e
     @media screen and (min-width: media-min-width) and (max-width: media-max-width)
         left: aside-percentage
-    @media screen and (max-width: media-max-width)
+    @media screen and (max-width: media-min-width)
         left: 0
         top: 0
         ul
@@ -185,6 +184,8 @@ a
     .disabled
         cursor: default
         color: #aaa
+
+@import "highlight"
 
 
     
